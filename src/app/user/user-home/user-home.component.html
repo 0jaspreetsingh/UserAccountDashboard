@@ -1,5 +1,12 @@
 <div class="user-home">
-  <uad-user-view *ngFor="let user of users" [user]="user"></uad-user-view>
+  <mat-toolbar class="heading">
+    <span>User Accounts</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button aria-label="Example icon button with a delete icon" class="padding-right"
+      (click)="addNew = true">
+      <i class="fa fa-plus" aria-hidden="true"></i> Add new user
+    </button>
+  </mat-toolbar>
+  <uad-user-edit *ngIf="addNew" (close)="refresh($event)"></uad-user-edit>
+  <uad-user-view *ngFor="let user of users" [user]="user" (refreshList) = "refresh($event)"></uad-user-view>
 </div>
-
-

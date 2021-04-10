@@ -1,7 +1,7 @@
 .user-card {
   padding: 8px;
   margin: 8px;
-  color: grey;
+
 }
 
 .user-card:hover {
@@ -25,4 +25,8 @@
 .fa{
   margin-right: 8px;
   width: 16px;
+}
+
+.padding-right{
+  margin-right: 8px;
 }

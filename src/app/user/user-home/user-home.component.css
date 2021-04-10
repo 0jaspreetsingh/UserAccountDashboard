@@ -1,6 +1,16 @@
-.user-home{
+.user-home {
   padding-bottom: 64px;
   margin-bottom: 64px;
   width: 60%;
   margin: auto;
+  margin-top: 80px;
+}
+
+.heading {
+  margin: 16px;
+  width: auto;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }

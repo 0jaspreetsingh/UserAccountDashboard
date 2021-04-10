@@ -13,11 +13,34 @@ export class UserHomeComponent implements OnInit {
   */
 	users?: User[];
 
+	/**
+  * Add new of user home component
+  */
+	addNew: boolean = false;
+
 	constructor(private readonly userService: UserService) {}
 
 	ngOnInit(): void {
+		this.getUsers();
+	}
+
+	/**
+  * Gets users
+  */
+	getUsers(): void {
 		this.userService.getAllUsers().subscribe((res) => {
 			this.users = res;
 		});
+	}
+
+ /**
+  * Refreshs user home component
+  * @param [refresh]
+  */
+ refresh(refresh?: boolean): void {
+		this.addNew = false;
+		if (refresh) {
+			this.getUsers();
+		}
 	}
 }

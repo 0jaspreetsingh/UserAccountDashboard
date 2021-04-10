@@ -7,3 +7,10 @@
   bottom: 0;
   width: 100%;
 }
+
+.shadow{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  position: fixed!important;
+  z-index: 1000;
+  top: 0;
+}
