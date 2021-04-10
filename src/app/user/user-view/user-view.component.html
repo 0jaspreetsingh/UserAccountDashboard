@@ -1,1 +1,34 @@
-<p>user-view works!</p>
+<mat-card class="user-card">
+
+  <div class="container m-0 mr-0 p0">
+
+    <div class="row">
+      <div class="col-sm-1">
+        <!-- <mat-icon class="material-icons-round" aria-hidden="false" aria-label="Example home icon">person</mat-icon> -->
+        <i class="fa fa-user-circle-o icon" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-3">
+        <div><i class="fa fa-id-badge" aria-hidden="true"></i>{{user.name}} ({{user.id}})</div>
+        <div><i class="fa fa-info" aria-hidden="true"></i>{{user.department}}</div>
+      </div>
+
+
+      <div class="col-sm-3">
+
+        <div><i class="fa fa-phone" aria-hidden="true"></i>{{user.phone}} </div>
+        <div><i class="fa fa-envelope" aria-hidden="true"></i>{{user.email}}</div>
+
+      </div>
+      <div class="col-sm-4">
+        <div><i class="fa fa-address-card-o" aria-hidden="true"></i>{{user.address}}</div>
+        <div><i class="fa fa-globe" aria-hidden="true"></i>{{user.country}}</div>
+
+
+      </div>
+      <div class="col-sm-1">
+        <mat-icon class="material-icons-round" aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+      </div>
+    </div>
+  </div>
+
+</mat-card>

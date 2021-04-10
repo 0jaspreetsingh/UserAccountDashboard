@@ -1,0 +1,28 @@
+.user-card {
+  padding: 8px;
+  margin: 8px;
+  color: grey;
+}
+
+.user-card:hover {
+  color: rgba(4, 116, 235, 0.877) !important;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  justify-content: center;
+}
+
+.icon {
+  transform: scale(2);
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.fa{
+  margin-right: 8px;
+  width: 16px;
+}
