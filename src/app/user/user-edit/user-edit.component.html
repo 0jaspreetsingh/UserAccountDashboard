@@ -1,0 +1,60 @@
+<mat-card class="form">
+  <form [formGroup]="form">
+
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName = "name">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Department</mat-label>
+            <input matInput formControlName = "department">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St" formControlName = "address"></textarea>
+      </mat-form-field>
+
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" formControlName="email">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="Ex. California" formControlName = "phone">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <input matInput  maxlength="5" placeholder="Ex. India" value="" formControlName = "country">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button (click)="this.close.emit(false)">Cancel</button>
+        <button mat-raised-button color="primary" (click)="save()">Save</button>
+      </div>
+    </section>
+  </form>
+</mat-card>

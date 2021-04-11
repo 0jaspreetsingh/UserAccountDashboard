@@ -1,0 +1,39 @@
+<mat-card class="user-card">
+
+  <div class="container m-0 mr-0 p0">
+
+    <div class="row" *ngIf="user">
+      <div class="col-sm-1">
+        <!-- <mat-icon class="material-icons-round" aria-hidden="false" aria-label="Example home icon">person</mat-icon> -->
+        <i class="fa fa-user-circle-o icon" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-3">
+        <div><i class="fa fa-id-badge" aria-hidden="true"></i>{{user.name}} ({{user.id}})</div>
+        <div><i class="fa fa-info" aria-hidden="true"></i>{{user.department}}</div>
+      </div>
+
+
+      <div class="col-sm-3">
+
+        <div><i class="fa fa-phone" aria-hidden="true"></i>{{user.phone}} </div>
+        <div><i class="fa fa-envelope" aria-hidden="true"></i>{{user.email}}</div>
+
+      </div>
+      <div class="col-sm-3">
+        <div *ngIf="user.address"><i class="fa fa-address-card-o" aria-hidden="true"></i>{{user.address}}</div>
+        <div><i class="fa fa-globe" aria-hidden="true"></i>{{user.country}}</div>
+
+      </div>
+      <div class="col-sm">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a delete icon" class="padding-right" (click)="edit = true">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+          <mat-icon (click)="delete()">delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</mat-card>
+<uad-user-edit *ngIf="edit" (close)="refresh($event)" [user] = "user"></uad-user-edit>
