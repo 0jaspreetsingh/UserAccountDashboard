@@ -1,12 +1,12 @@
-# Docker run commands
+# UserAccountDashboard
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+
+## Docker run commands
 
 docker pull 0jaspreet/userdashboard
 
 docker run --name userdashboard -d -p 8888:80 0jaspreet/userdashboard
-
-# UserAccountDashboard
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
 ## Development server
 
