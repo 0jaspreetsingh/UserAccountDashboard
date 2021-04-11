@@ -45,7 +45,7 @@ jobs:
       with:
           name: deploy_dist
     - name: Publish to Docker Hub  
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Login to Docker Hub
       run: echo ${{ secrets.USERACCCOUNTACCCESSTOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
     - name: Build Container image
