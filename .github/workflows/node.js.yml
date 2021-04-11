@@ -37,6 +37,7 @@ jobs:
   build-docker-image:
     needs: [build]
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v1
